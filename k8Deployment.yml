@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: deployment
+metadata:
+  name: nkdock-deployment
+  labels: 
+    app: nkdock
+spec:
+  replicas:
+  selector:
+    matchLabels:
+      app: nkdock
+  template:
+    metadata:
+      labels:
+        app: nkdock
+  spec:
+    containers:
+      - name: nodeserver
+        image: nkdock:1.0
+        ports:
+          - containerPort: 3000
+
