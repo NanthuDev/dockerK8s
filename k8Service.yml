@@ -1,0 +1,7 @@
+apiVersion: apps/v1
+kind: service
+metadata:
+  name: nkdock-service
+spec:
+  selector:
+    app:
