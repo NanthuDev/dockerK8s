@@ -1,0 +1,8 @@
+
+Download minikube
+
+minikube start
+
+imagePullPolicy: Never
+
+minikube image load test/kubia

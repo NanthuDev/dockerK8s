@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: deployment
+kind: Deployment
 metadata:
   name: nkdock-deployment
   labels: 
@@ -13,10 +13,13 @@ spec:
     metadata:
       labels:
         app: nkdock
-  spec:
-    containers:
-      - name: nodeserver
-        image: nkdock:1.0
+    spec:
+      containers:
+      - name: nkdock2
+        image: nkdock2:latest
+        imagePullPolicy: IfNotPresent
         ports:
           - containerPort: 3000
+        
+
 
